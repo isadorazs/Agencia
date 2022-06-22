@@ -7,7 +7,7 @@ public class Conta
     private double sacar;
     private double depositar;
     private double transferir;
-    
+    private double extrato;
     
 public Conta() {
     
@@ -58,8 +58,28 @@ public Conta() {
         System.out.println("Depositado: " + valor);
         System.out.println("Novo saldo: " + saldo + "\n");
     }
-    
 
+    public void transferir(Conta contas, double valor) {
+        if(saldo >= valor){
+
+	System.out.println("Saldo insuficiente para a operação");
+		} 
+	else {
+        saldo -= valor;
+        contas.saldo += valor;
+
+		}
+	}
+      
+     public void extrato(){
+        System.out.println("\tEXTRATO");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Número da conta: " + this.conta);
+        System.out.printf("Saldo atual: %.2f\n",this.saldo);
+        System.out.println("Saques realizados hoje: " + this.saques + "\n");
+
+
+       
 }
 
     
