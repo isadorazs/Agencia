@@ -51,6 +51,7 @@ public Conta() {
             System.out.println("Saldo insuficiente. Faça um depósito\n");
         }
     }
+  
 
     public void depositar(double valor){ 
       
@@ -59,25 +60,26 @@ public Conta() {
         System.out.println("Novo saldo: " + saldo + "\n");
     }
 
+  
     public void transferir(Conta contas, double valor) {
         if(saldo >= valor){
 
-	System.out.println("Saldo insuficiente para a operação");
+	  System.out.println("Saldo insuficiente para a operação");
 		} 
-	else {
+	  else {
         saldo -= valor;
         contas.saldo += valor;
 
 		}
 	}
       
-     public void extrato(){
+     public void extrato(Conta contas,double saldo){
+       
         System.out.println("\tEXTRATO");
-        System.out.println("Nome: " + this.nome);
-        System.out.println("Número da conta: " + this.conta);
+        System.out.println("Número da conta: " + contas.saldo);
         System.out.printf("Saldo atual: %.2f\n",this.saldo);
-        System.out.println("Saques realizados hoje: " + this.saques + "\n");
-
+       
+     }
 
        
 }
