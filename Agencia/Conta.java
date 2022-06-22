@@ -10,23 +10,23 @@ public Conta() {
 
 }
     public int getcodigo(int codigo) {
-            return codigo;
-    }
+		    return codigo;
+	}
      public void setcodigo(int codigo) {
-        this.codigo = codigo;
-    }
+		this.codigo = codigo;
+	}
      public int gettipo() {
-        return tipo;
-    }
+		return tipo;
+	}
      public void settipo(int tipo) {
-        this.tipo = tipo;
-    
-    }
-    
+		this.tipo = tipo;
+	
+	}
+	
      public double getSaldo(double saldo){
                  this.saldo = saldo;
                  return saldo;
-        }    
+        }	
      public double getLimite(double limite){
                 this.limite = limite;
                 return limite;
